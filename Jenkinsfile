@@ -25,6 +25,10 @@ pipeline {
             steps {
                 script {
                     sh 'docker-compose up -d'
+                    // Wait for services to be ready
+                    sh 'sleep 30'
+                    // Run migrations
+                    sh 'docker-compose exec -T web python manage.py migrate'
                 }
             }
         }
