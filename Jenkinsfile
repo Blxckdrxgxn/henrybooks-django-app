@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     environment {
-        DOCKER_IMAGE = "henrybooks-django-app"
+        DOCKER_IMAGE = "pauleysh/henrybooks-django-app"
     }
 
     stages {
